@@ -92,6 +92,19 @@
                     </execution>
                 </executions>
             </plugin>
+		
+		<plugin>
+                		<groupId>org.owasp</groupId>
+                		<artifactId>dependency-check-maven</artifactId>
+                		<version>5.3.2</version>
+                		<executions>
+                    			<execution>
+                        			<goals>
+                            				<goal>check</goal>
+                        			</goals>
+                    			</execution>
+                		</executions>
+            		</plugin>
 
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
@@ -102,14 +115,5 @@
 
         </plugins>
     </build>
-
-
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>8058d35329e6-releases</name>
-            <url>http://localhost:8081/artifactory/libs-release-local</url>
-        </repository>
-    </distributionManagement>
 
 </project>
